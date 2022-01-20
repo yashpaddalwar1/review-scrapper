@@ -5,7 +5,8 @@ body, html {
 
 .content {
     margin: 0 auto;
-    width: 400px;
+    width: 500px;
+    margin-top: 50px;
 }
 
 table, td, th {

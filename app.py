@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request,jsonify
+from flask import Flask, render_template, request,jsonify,flash
 from flask_cors import CORS,cross_origin
 import requests
 from bs4 import BeautifulSoup as bs
@@ -16,6 +16,7 @@ def homePage():
 def index():
     if request.method == 'POST':
         try:
+            s = request.form['content']
             searchString = request.form['content'].replace(" ","")
             flipkart_url = "https://www.flipkart.com/search?q=" + searchString
             uClient = uReq(flipkart_url)
@@ -69,7 +70,7 @@ def index():
                 mydict = {"Product": searchString, "Name": name, "Rating": rating, "CommentHead": commentHead,
                           "Comment": custComment}
                 reviews.append(mydict)
-            return render_template('results.html', reviews=reviews[0:(len(reviews)-1)])
+            return render_template('results.html', reviews=reviews,s=s)
         except Exception as e:
             print('The Exception message is: ',e)
             return 'something is wrong'
