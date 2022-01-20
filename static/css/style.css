@@ -103,6 +103,21 @@ background: rgb(255, 0, 0);
   width: 100px;
 }
 
+.inp::after{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4rem;
+  font-family: 'Amaranth', sans-serif;
+  background-color: rgb(27, 24, 24);
+  color: bisque;
+  border: 3px solid;
+  border-radius: 5px;
+  border-color:#ff0000;
+  padding: 0.5rem;
+  width: 100px;
+}
+
 ::placeholder{
   color:rgb(212, 148, 148);
 }
