@@ -126,11 +126,11 @@ background: rgb(255, 0, 0);
   font-size: 40px;
   margin-left: 0px;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .10em solid rgb(255, 0, 43); /* The typwriter cursor */
+  border-right: .10em solid rgb(0, 238, 255); /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .10em; /* Adjust as needed */
-  caret-color: red;
+  caret-color: rgb(0, 204, 255);
   animation: 
     typing 3.0s steps(30, end),
     blink-caret .45s step-end infinite;
@@ -145,7 +145,7 @@ background: rgb(255, 0, 0);
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: orange; }
+  50% { border-color: rgb(0, 183, 255); }
 }
 
 .inp::after{
